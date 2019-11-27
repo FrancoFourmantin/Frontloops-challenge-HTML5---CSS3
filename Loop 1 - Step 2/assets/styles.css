@@ -1,0 +1,125 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+.body_container{
+    background-image: url(img/background.jpg);
+    height: 100vh;
+}
+
+.payment_title{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 0 30px 0 ;
+    font-weight: 500;
+    max-width: 400px;
+    font-size: 25px;
+}
+
+
+.puntos_suspensivos{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 20px 0 20px 0;
+}
+
+.punto {
+	border-radius: 100%;
+	border: 3px solid #ddd;
+	margin-right: 10px;
+}
+
+.punto_activo{
+    border-color: #999;
+}
+
+
+.items_container{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    border-radius: 3px;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-box-shadow: 13px 26px 31px 7px rgba(64,64,64,0.37);
+    -moz-box-shadow: 13px 26px 31px 7px rgba(64,64,64,0.37);
+    box-shadow: 13px 26px 31px 7px rgba(64,64,64,0.37);
+}
+
+.payment_img{
+    width:50px;
+    margin-right: 20px;
+}
+
+.payment_box{
+    border-top: 1px solid #ccc;
+    display: flex;
+    align-content: center;
+    padding: 20px;
+}
+
+.payment_method{
+    position: relative;
+    top: 20%;
+    text-transform: uppercase;
+    color: gray;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.boton_next{
+    background-color: #5572d6;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    border-radius: 0 0 3px 3px;
+}
+
+.boton_next:active{
+    top:2px;
+}
+
+.boton_text{
+    color: white;
+    text-transform: uppercase;
+}
+
+.boton_next img{
+    position: relative;
+    bottom: 9%;
+    margin-left: 5px;
+}
+
+
+.payment_method_active{
+    font-weight: bold;
+    color: black;
+    letter-spacing: 2px;
+}
+
+
+.payment_box:hover{
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.boton_next:hover{
+    background-color:#6a8aff ;
+    cursor: pointer;
+}
+
+
+.check{
+    margin-left: auto;
+}
+
+

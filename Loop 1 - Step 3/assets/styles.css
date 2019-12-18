@@ -16,7 +16,7 @@ body{
     position: relative;
     left: 50%;
     top: 40%;
-    height: 60%;
+    height: 70%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     box-shadow: 2px 4px 12px 0px rgba(0,0,0,0.75);

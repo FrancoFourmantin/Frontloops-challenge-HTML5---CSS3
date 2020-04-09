@@ -1,0 +1,114 @@
+* , *:after , *:before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: 'Roboto' , sans-serif;
+}
+
+
+body{
+    background-color: #F2CE97;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    max-width: 70%;
+    min-height: 70%;
+    background-color: white;
+}
+
+.info-nota{
+    display: flex;
+    padding: 20px;
+    background-color: #484956;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 350px;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-top: 20px;
+}
+
+.title h1{
+    font-weight: 100;
+    font-size: 2rem;
+    letter-spacing: 0;
+}
+
+.title h1:after{
+    content: "";
+    height: 3px;
+    margin-top: 10px;
+    display: block;
+    background-color:#E37B62;
+    width: 60px;
+}
+
+.persona-info{
+    display: flex;
+    align-items: center;
+    color: white;
+    height: 80px;
+    
+}
+
+.persona-info img{
+    border-radius: 100%;
+    margin-right: 10px;
+    box-shadow: 1px  2px 3px 2px  #2f3038c9;
+}
+
+.nota{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+    height: 88%;
+}
+
+.texto-nota{
+    display: grid;
+    height: 100%;
+    font-size: 1.1rem;
+}
+
+.primer-parrafo::first-letter{
+    font-size: 3rem;
+}
+
+.texto-nota p {
+    line-height: 1.6rem;
+}
+
+footer{
+    border-top: 1px solid rgba(0, 0, 0, 0.075);
+    box-shadow: 0px -2px 0px 2px rgba(218, 218, 218, 0.199);
+    padding: 20px;
+    display: flex;
+}
+
+.interaccion{
+    margin-left: auto;
+    display: flex;
+    justify-items: baseline;
+}
+
+.cantidad{
+    color: gray;
+    margin-right: 20px;
+}
+
+
+

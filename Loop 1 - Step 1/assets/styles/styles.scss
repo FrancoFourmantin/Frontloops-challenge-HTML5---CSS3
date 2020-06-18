@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto , sans-serif ;
+}
+
+
+$background-color : #7495C6;
+$titulos : #466BD7;
+$white : #FFFFFF;
+$gray : #949494;
+
+body{
+    background: $background-color;
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-content: center;
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    background-color: $white;
+    width: 70vw;
+    padding: 1em;
+
+    @media screen and (max-width:768px){
+        grid-template-columns: 1fr;   
+        width: 90vw;
+    }
+}
+
+.card{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-gap: .5em;
+    grid-template-rows: repeat(4, 1fr);
+    padding: 1em 0;
+    transition: all ease-in-out .3s ;
+
+
+
+    &:hover{
+        cursor: pointer;
+        background-color: lighten($gray, $amount: 20);
+    }
+
+    &__img{
+        width: 4em;
+    }
+
+    &__title{
+        letter-spacing: 2px;
+        color: $titulos;
+    }
+
+    &__description{
+        max-width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 1.4em;
+        color: $gray;
+        align-self: start;
+    }
+
+    &__prize{
+        font-size: 2em;
+        font-weight: bolder;
+        display: flex;
+        color: $titulos;
+
+        &_symbol{
+            font-size: .5em;
+        }
+
+        &_time{
+            font-size: .5em;
+            align-self: flex-end;
+            
+        }
+    }
+}
+

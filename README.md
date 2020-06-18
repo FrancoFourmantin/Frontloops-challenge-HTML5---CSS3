@@ -10,7 +10,7 @@
 6.https://francofourmantin.github.io/Frontloops-challenge-HTML5---CSS3/Loop%201%20-%20Step%206/assets/  
 7.https://francofourmantin.github.io/Frontloops-challenge-HTML5---CSS3/Loop%201%20-%20Step%207/assets/  
 8.https://francofourmantin.github.io/Frontloops-challenge-HTML5---CSS3/Loop%201%20-%20Step%208/assets/  
-9.
+9.  
 10.
 
 ### Desafios 11 - 20 ###

@@ -6,33 +6,36 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Loop 1 - Step 3</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./styles/styles.css" />
 </head>
-
-
 <body>
-  <div class="contenedor">
-    <section class="header">
-     <h1 class="title">SimpleWheels</h1>
-     <div class="circuloafuera">
-       <img src="img/account.svg" alt="account">   
-     </div>
-    </section>
-    <section class="textogris">
-    <p>Thanks for your order #2357654, your package will be on it's whay shortly</p>
-    </section>
-    <section class="orden">
-      <span class="producto">chapelli vintage single speed</span>
-      <span class="precio">$317</span>  
-    </section>
-    <section class="orden">
-        <span class="producto">castelli arenberg gel gloves</span>
-        <span class="precio">$39</span>  
-    </section>
-    <section class="total">
-      <span class="total">total</span>
-      <span class="precio">$356</span>
-    </section>
-  </div>
+
+  <main class="card">
+
+    <div class="card__content">
+      <header class="card__header">
+        <h1 class="card__title">SimpleWheels</h1>
+        <div class="card__icon"></div>
+      </header>
+      <article class="card__description">Thanks for your order #2357654, your package will be on it's way shortly.</article>
+  
+      <section class="summaries">
+        <article class="summary">
+          <p class="summary__description">Chapelli Vintage Single Speed</p>
+          <p class="summary__prize">$317</p>
+        </article>
+        <article class="summary">
+          <p class="summary__description">Chapelli Vintage Gel Gloves</p>
+          <p class="summary__prize">$39</p>
+        </article>
+        <article class="summary">
+          <p class="summary__description summary__description--final">TOTAL</p>
+          <p class="summary__prize">$356</p>
+        </article>
+      </section>
+
+    </div>
+    
+  </main>
 </body>
 </html>

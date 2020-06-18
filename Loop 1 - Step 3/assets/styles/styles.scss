@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto , sans-serif;
+}
+
+//Colors
+
+$black : #110000;
+$white : #ffffff;
+$green : #16a085;
+
+
+body{
+    background-color: $green;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.card{
+
+    padding: 3em;
+    border-radius: 5px;
+    width: 40vw;
+    height: 70vh;
+    background-color: $white;
+    background-image: url(../img/bicycle.png);
+    background-size: 100%;
+    background-position: center 25vh;
+    background-repeat: no-repeat;
+    background-clip: padding-box;
+
+
+    @media screen and (max-width:1280px){
+        width: 90vw;
+        height: 80vh;
+    }
+
+    &__content{
+        display: grid;
+        grid-gap: 1.3em;
+    }
+
+    &__header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__title{
+        font-size: 1.5em;
+    }
+
+    &__icon{
+        height: 2.5em;
+        width: 2.5em;
+        border-radius: 50%;
+        border: 1px solid rgba($black, $alpha: .3);
+        position: relative;
+        background-image: url(../img/account.svg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        transition: all ease-in .4s;
+        
+        &:hover{
+           box-shadow: 0px 0px 0px 5px rgba($black, $alpha: .2);
+        }
+    }
+
+    &__description{
+        color: rgba($black, $alpha: .5);
+        margin-bottom: 1em;
+    }
+
+    .summaries{
+        display: grid;
+        width: 100%;
+        grid-gap: 1.3em;
+
+        .summary{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-between;
+            
+
+            &__description{
+                font-weight: 400;
+
+                &--final{
+                    font-size: 1.4em;
+                }
+            }
+
+            &__prize{
+                font-size: 1.2em;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+
+

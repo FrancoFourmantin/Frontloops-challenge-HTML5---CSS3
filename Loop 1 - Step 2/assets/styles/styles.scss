@@ -89,7 +89,7 @@ body{
                 display: flex;
                 width: 100%;
                 &::after{
-                    content: url(/img/check.svg);
+                    content: url(./img/check.svg);
                     margin-left: auto;
                 }
             }
@@ -130,7 +130,7 @@ body{
         justify-content: center;
         transition: all ease-in-out .1s ;
         &::after{
-            content: url(/img/arrow.svg);
+            content: url(../img/arrow.svg);
         }
         &:hover{
             cursor: pointer;

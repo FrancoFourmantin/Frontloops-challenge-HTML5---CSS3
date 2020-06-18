@@ -1,0 +1,224 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Roboto , sans-serif;
+}
+
+body {
+  background: #819fb9;
+  background: -webkit-gradient(linear, left bottom, left top, from(#819fb9), to(#cfdde8));
+  background: linear-gradient(0deg, #819fb9 0%, #cfdde8 100%);
+  height: 100vh;
+  width: 100vw;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.card {
+  background: #ffffff;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1em;
+}
+
+.card__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #6a96d8;
+  color: #ffffff;
+  padding: 1em;
+}
+
+.card__close {
+  cursor: pointer;
+}
+
+.card__name {
+  font-size: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 1px;
+}
+
+.card__name::before {
+  content: '';
+  width: .3em;
+  height: .3em;
+  display: inline-block;
+  border-radius: 10000px;
+  background-color: #ffffff;
+  margin-right: 1em;
+}
+
+.card__separator {
+  padding: .2em 1em;
+  color: rgba(17, 0, 0, 0.5);
+  text-align: center;
+}
+
+.card__day {
+  font-size: .8em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card__day::before, .card__day::after {
+  height: 1px;
+  content: '';
+  display: block;
+  width: 100%;
+  background-color: rgba(17, 0, 0, 0.3);
+}
+
+.card__day::before {
+  margin-right: 1em;
+}
+
+.card__day::after {
+  margin-left: 1em;
+}
+
+.card .messages {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1em;
+  padding: 1em;
+}
+
+.card .messages .message {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 70%;
+  font-size: .8em;
+  font-weight: 500;
+  display: -ms-grid;
+  display: grid;
+}
+
+.card .messages .message--blocked time {
+  display: none;
+}
+
+.card .messages .message:nth-child(2n) {
+  -ms-grid-column-align: end;
+      justify-self: end;
+  display: -ms-grid;
+  display: grid;
+  text-align: right;
+}
+
+.card .messages .message__time {
+  font-size: .8em;
+  color: rgba(17, 0, 0, 0.5);
+}
+
+.card .messages .message__text {
+  background-color: #f2f2f2;
+  padding: .8em;
+  border-radius: 5px;
+  text-align: left;
+  position: relative;
+}
+
+.card .messages .message__text::after {
+  content: '';
+  width: 5px;
+  height: 20px;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  display: inline-block;
+  background-color: #e6edf6;
+  -webkit-clip-path: polygon(0 25%, 100% 60%, 100% 25%);
+          clip-path: polygon(0 25%, 100% 60%, 100% 25%);
+}
+
+.card .messages .message__text--owner {
+  background-color: #e6edf6;
+}
+
+.card .messages .message__text--blocked {
+  background-color: #ffc2c1;
+}
+
+.card__footer {
+  padding: .5em 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.card__footer::before {
+  content: '';
+  display: block;
+  background-color: rgba(17, 0, 0, 0.3);
+  height: 1px;
+  width: 95%;
+  position: absolute;
+  top: 0;
+  left: 2.5%;
+}
+
+.card__input {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  margin-right: 1em;
+  padding: 1em 0;
+  border: none;
+  outline: none;
+}
+
+.card__btn {
+  color: #6a96d8;
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 1em;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+/*# sourceMappingURL=styles.css.map */

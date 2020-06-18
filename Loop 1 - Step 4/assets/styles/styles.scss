@@ -1,0 +1,195 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto , sans-serif;
+}
+
+//Colores
+
+$red : #ffc2c1;
+$white : #ffffff;
+$lightBlue : #e6edf6;
+$blue : #6a96d8;
+$gray : #f2f2f2;
+$black : #110000;
+
+
+body{
+    background: rgb(129,159,185);
+    background: linear-gradient(0deg, rgba(129,159,185,1) 0%, rgba(207,221,232,1) 100%);
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+
+.card{
+    background: $white;
+    display: grid;
+    grid-gap: 1em;
+
+
+    &__header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background: $blue;
+        color:$white;
+        padding: 1em;
+    }
+
+    &__close{
+        cursor: pointer;
+    }
+    &__name{
+        font-size: 1em;
+        display: flex;
+        align-items: center;
+        letter-spacing: 1px;
+
+        &::before{
+            content: '';
+            width: .3em;
+            height: .3em;
+            display: inline-block;
+            border-radius: 10000px;
+            background-color: $white;
+            margin-right: 1em;
+        }
+    }
+
+    &__separator{
+        padding: .2em 1em;
+        color: rgba($black, $alpha: .5);
+        text-align: center;
+    }
+
+    &__day{
+        font-size: .8em;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        &::before , &::after{
+            height: 1px;
+            content: '';    
+            display: block;
+            width: 100%;
+            background-color: rgba($black, $alpha: .3);
+        }
+
+        &::before{
+            margin-right: 1em;
+        }
+        &::after{
+            margin-left: 1em;
+        }
+    }
+
+    .messages{
+        display: grid;
+        grid-gap: 1em;
+        padding: 1em;
+        
+
+        .message{
+            width: max-content;
+            max-width: 70%;
+            font-size: .8em;
+            font-weight: 500;
+            display: grid;
+            
+            &--blocked time{
+                display: none;
+            }
+     
+            
+
+            &:nth-child(2n){
+               justify-self: end;
+               display: grid;
+               text-align: right;
+            }
+
+            &__time{
+                font-size: .8em;
+                color: rgba($black, $alpha: .5);   
+            }
+
+            &__text{
+                background-color: $gray;
+                padding: .8em;
+                border-radius: 5px;
+                text-align: left;
+                position: relative;
+
+                &::after{
+                    content: '';
+                    width: 5px;
+                    height: 20px;
+                    position: absolute;
+                    top: -5px;
+                    left: -5px;
+                    display: inline-block;
+                    background-color: $lightBlue;
+                    clip-path: polygon(0 25%, 100% 60%, 100% 25%);
+                }
+
+                &--owner{
+                    background-color: $lightBlue;
+                }
+
+                &--blocked{
+                    background-color: $red;
+                }
+            }
+        }
+    }//Fin messages
+
+    &__footer{
+        padding: .5em 1em;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        
+        &::before{
+            content: '';
+            display: block;
+            background-color: rgba($black, $alpha: .3);
+            height: 1px;
+            width: 95%;
+
+            position: absolute;
+            top: 0;
+            left: 2.5%;
+        }
+    }
+
+    &__input{
+        flex-grow: 2;
+        margin-right: 1em; 
+        padding: 1em 0;
+        border: none;
+        outline: none;
+    }
+
+    &__btn{
+        color: $blue;
+        background-color: transparent;
+        font-weight: 600;
+        font-size: 1em;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        letter-spacing: 1px;
+    }
+
+}
+
+

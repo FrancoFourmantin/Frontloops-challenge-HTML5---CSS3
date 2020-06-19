@@ -7,64 +7,65 @@
   <title>Loop 1 - Step 5</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Prompt:900" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./styles/styles.css" />
 </head>
 <body>
-  
-  
-  <main>
+  <main class="ticket">
+    <header class="ticket__header">
+      <article class="ticket__country">
+        <h2 class="ticket__title">FRA</h2>
+        <small class="ticket__description">FRANFURT</small>
+      </article>
 
-    <div class="card">
-      <header>
-        <div class="francia-title caja-vuelo">
-          <h2>fra</h2>
-          <small>frankfurt</small>
-        </div>
+      <div class="ticket__divisor"></div>
+    
+      <article class="ticket__country">
+        <h2 class="ticket__title">AMS</h2>
+        <small class="ticket__description">AMSTERDAN</small>
+      </article>
+  </header>
 
-        <div class="guion_bajo">
-          &mdash;
-        </div>
-        <div class="amsterdan-title caja-vuelo">
-          <h2>ams</h2>
-          <small>amsterdam</small>
-        </div>
-      </header>
-      
-      <section class="info-vuelo">
-        <div class="info-item">
-          <div class="info-title">FLIGHT</div>
-          <div class="info-content">815</div>
-        </div>
-        <div class="info-item">
-          <div class="info-title">FLIGHT</div>
-          <div class="info-content">815</div>
-        </div>
-        <div class="info-item">
-          <div class="info-title">FLIGHT</div>
-          <div class="info-content">815</div>
-        </div>
-      </section>
-      
-      <section class="info-pasajero">
-        <div class="datos-pasajero">
-          <div class="datos-item">
-            <div class="datos-title">PASSENGER</div>
-            <div class="datos-content">Robert de Niro</div>
-          </div>
-          <div class="datos-item">
-            <div class="datos-title">Class</div>
-            <div class="datos-content">Robert de Niro</div>
-          </div>
-          <div class="datos-item">
-            <div class="datos-title">Departure</div>
-            <div class="datos-content">Robert de Niro</div>
-          </div>
-        </div>
-        <div class="codigo-qr">
-          <img src="img/qr.svg" alt="codigo-qr">
-        </div>
-      </section>
-    </div>
+  <section class="ticket_info">
+
+    <article class="info">
+      <h5 class="info__title">FLIGHT</h5>
+      <span class="info__value">815</span>
+    </article>
+
+    <article class="info">
+      <h5 class="info__title">GATE</h5>
+      <span class="info__value">23G</span>
+    </article>
+
+    <article class="info">
+      <h5 class="info__title">SEAT</h5>
+      <span class="info__value">10F</span>
+    </article>
+
+  </section>
+
+
+  <footer class="ticket__footer">
+    <section class="passenger_info">
+      <article class="passenger_info__datos">
+        <h5 class="passenger_info__title">PASSENGER</h5>
+        <span class="passenger_info__value">Robert De Niro</span>
+      </article>
+      <article class="passenger_info__datos">
+        <h5 class="passenger_info__title">CLASS</h5>
+        <span class="passenger_info__value">Business</span>
+      </article>
+      <article class="passenger_info__datos">
+        <h5 class="passenger_info__title">DEPARTURE</h5>
+        <span class="passenger_info__value">3:45am, Dec 15</span>
+      </article>
+    </section>
+    <section class="passenger_qr">
+      <img src="./img/qr.svg" alt="codigo qr">
+    </section>
+
+  </footer>
+
 
   </main>
 </body>

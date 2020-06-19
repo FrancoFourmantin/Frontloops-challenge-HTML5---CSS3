@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Roboto , sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(../img/background.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.ticket {
+  background-color: #ffffff;
+  padding: 2em;
+  display: -ms-grid;
+  display: grid;
+  border-radius: 5px;
+}
+
+.ticket__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 3em;
+}
+
+.ticket__country:last-child {
+  text-align: right;
+}
+
+.ticket__title {
+  font-size: 3em;
+  font-family: Prompt , sans-serif;
+  font-weight: 900;
+  color: #3b8acf;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  position: relative;
+  top: .5em;
+}
+
+.ticket__description {
+  font-weight: 600;
+  color: rgba(77, 77, 77, 0.5);
+}
+
+.ticket__divisor {
+  height: .5em;
+  width: 2em;
+  background-color: #d3e6f4;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: 0 2em;
+  position: relative;
+  bottom: 1.2em;
+}
+
+.ticket_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 80%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.ticket_info .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.ticket_info .info__title {
+  color: rgba(77, 77, 77, 0.5);
+}
+
+.ticket_info .info__value {
+  font-weight: 600;
+}
+
+.ticket__footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.ticket__footer .passenger_info {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1em;
+  margin-right: 2em;
+}
+
+.ticket__footer .passenger_info__title {
+  color: rgba(77, 77, 77, 0.5);
+}
+
+.ticket__footer .passenger_info__value {
+  font-weight: 600;
+}
+
+.ticket__footer .passenger_qr img {
+  width: 100%;
+}
+/*# sourceMappingURL=styles.css.map */

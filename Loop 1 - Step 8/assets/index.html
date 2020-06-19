@@ -7,49 +7,58 @@
   <title>Loop 1 - Step 8</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./styles/styles.css" />
 </head>
 <body>
-  <!--
-    Hope you noticed there is another font added so don't get confused once you see it in the design :)
-  -->
-  <main>
-    <div class="container">
-      <div class="hero-image">
-        <img class="flecha-atras" src="img/arrow-back.svg" alt="flecha atras">
+  <main class="container">
+    
+
+
+
+    <header class="header">
+      <div class="header__item">
+        <img class="header__back" src="img/arrow-back.svg"  alt="boton atras">
+        <span class="header__backText">BACK</span>
       </div>
       
-      <div class="info">
-        <nav>
-          <ul>
-            <li class="hover-click">netherlands</li>
-            <li class="hover-click">spain</li>
-            <li class="hover-click">france</li>
-          </ul>
-        </nav>
+      <nav class="navbar">
+        <ul class="navbar__list">
+          <li class="navbar__item">NETHERLANDS</li>
+          <li class="navbar__item navbar__item--active">SPAIN</li>
+          <li class="navbar__item">FRANCE</li>
+        </ul>
+      </nav>
+    </header>
+    
+    <section class="container__img">
+      <img src="./img/background.jpg" alt="backgroun imagen">
+    </section>
+    
+
+    
+    <section class="content">
+      <h1 class="content__title">Visiting the pastelle city</h1>
+      <blockquote class="content__quote">By: <strong>Jerry Henderson,</strong> in Tourism</blockquote>
+      
+      <article class="content__info-container">
         
-        <div class="info-container">
-          <div class="titulo">
-            <h1>Visiting the pastelle city</h1>
+        <div class="content__photo-container">
+          <div>
+            <img class="content__img" src="./img/preview.jpg" alt="content imagen">
+            <img class="content__play" src="./img/play.svg" alt="play">
           </div>
-          <div class="artista">
-            <small>By<strong> Jerry Henderson</strong>, in Tourism</small>
-          </div>
-          <div class="media-container">
-            <div class="video-container">
-              <div class="video-play">
-                <img class="preview" src="img/preview.jpg" alt="preview">
-                <img class="play" src="img/play.svg" alt="play">
-              </div>
-              <a href="#" class="view-all">view all photos</a>
-            </div>
-            <div class="text-container"> 
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quis ipsa consequatur mollitia unde eius non asperiores a reiciendis iure? Aut aperiam laboriosam ipsam modi?</p>
-            </div>
-          </div>
+          <p class="content__link">VIEW ALL PHOTOS</p>
         </div>
-      </div>
-    </div>
+        
+        
+        <p class="content__data">As you, drive into the town from Alicante airport you will pass between two salt lakes - one is blue/green and the other is an impressive pink colour</p>
+      </article>
+    </section>
+    
+    
+    
+    
   </main>
+  
 </body>
 </html>

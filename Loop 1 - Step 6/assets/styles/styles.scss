@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto , sans-serif;
+
+    @media screen and (max-width:1000px) {
+        font-size: 11px;
+    }
+}
+
+
+//Colores
+
+$gray : #4D515D;
+$white : #ffffff;
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background-color: $gray;
+}
+
+.card{
+    background-color: $white;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    border-radius: 5px;
+    max-width: 80vw;
+
+    @media screen and (max-width:1000px) {
+        grid-template-columns: 1fr;
+        width: 100vw;
+    }
+
+    &__form{
+        display: grid;
+        grid-template-rows: 1fr 3fr .5fr;
+    }
+
+    &__header{
+        padding:1em 2em;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title{
+        font-size: 2em;
+        font-weight: 400;
+        margin-bottom: .5em;
+    }
+
+    &__subtitle{
+        color: rgba(#000000 , .5);
+    }
+
+    &__buttons{
+        padding: 1em 2em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        text-align: center;
+
+        .button{
+            text-align: center;
+            padding: 1.2em;
+            border: 1px solid rgba(#000, $alpha: .1);
+            border-radius: 5px;
+            text-align: center;
+            position: relative; 
+            color: rgba(#000, $alpha: .5);
+
+            cursor: pointer;
+            transition: all ease-in-out .3s;
+
+            &:hover {
+                box-shadow: 0px 5px 15px 0px rgba(#000, $alpha: .25);
+                color: #000;
+            }
+            
+            &__text{
+                font-size: .8em;
+                font-weight: 600;                
+            }
+            
+
+
+            &__logo{
+                width: 1.5em;
+                position: absolute;
+                left: 1em;
+                top: 1em;
+            }
+
+        }
+    }
+
+    .footer{
+        border-top: 1px solid rgba(#000, $alpha: .1);
+        padding: 1em 2em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__link{
+            text-decoration: none;
+            color: #000;
+            font-weight: 600;
+            font-size: .8em;
+
+            &--disabled{
+                color: rgba(#000, $alpha: .5);
+            }
+        }
+    }
+
+    &__img{
+        width: 100%;
+        height: 100%;
+
+        @media screen and (max-width:1000px) {
+            display: none;
+        }
+    }
+}
+
+
+
+

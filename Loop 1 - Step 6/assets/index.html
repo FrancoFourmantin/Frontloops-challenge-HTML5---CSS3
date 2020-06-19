@@ -6,60 +6,47 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Loop 1 - Step 6</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./styles/styles.css" />
 </head>
 <body>
-  <!--
-    Woah!
-    You've already finished half of the first loop. Keep going!
-  -->
-  <main class="container">
-    <div class="container-registro">
-      <section class="registro socialate-registro">
-        
-        <div class="socialite-container">
-          
-          <div class="header-registro">
-            <h1>Become a member</h1>
-            <small>Use social networks to join us instantly</small>
-            <small>You won't spend any time confirming those boring emails</small>
-          </div>
-          
-          <div class="socialate">
-            <div class="socialate-card">
-              <div class="socialate-text">
-                SIGN UP WITH GOOGLE +
-              </div>
-            </div>
-            
-            <div class="socialate-card">
-              <div class="socialate-text">
-                SIGN UP WITH GOOGLE +
-              </div>
-            </div>
-            
-            <div class="socialate-card">
-              <div class="socialate-text">
-                SIGN UP WITH GOOGLE +
-              </div>
-            </div>
-          </div>
+
+  <main class="card">
+
+
+    <section class="card__form">
+      <header class="card__header">
+        <h1 class="card__title">Become a member</h1>
+        <small class="card__subtitle">Use social networks to join us instantly</small>
+        <small class="card__subtitle">You won't spend any time confirming those boring emails</small>
+      </header>
+      
+      <section class="card__buttons">
+        <div class="button">
+          <img class="button__logo" src="./img/googleplus.svg" alt="logo google">
+          <span class="button__text">SIGN UP WITH GOOGLE+</span>
         </div>
-        
-        
-        <footer>
-          <p>You can still sign up with your emails adress</p>
-          <a href="#">sing up with email</a>
-        </footer>
-        
+        <div class="button">
+          <img class="button__logo" src="./img/facebook.svg" alt="logo google">
+          <span class="button__text">SIGN UP WITH FACEBOOK</span>
+        </div>
+        <div class="button">
+          <img class="button__logo" src="./img/twitter.svg" alt="logo google">
+          <span class="button__text">SIGN UP WITH TWITTER</span>
+        </div>
       </section>
       
+      <footer class="footer">
+        <a href="#" class="footer__link">You can still sign up with your email adress</a>
+        <a href="#" class="footer__link footer__link--disabled">SIGN UP WITH EMAIL</a>
+      </footer>
       
-      <section class="img">
-        <img src="img/side.jpg" alt="street-photo">
-      </section>
-    </div>
-  </main>
+    </section>
+    
+    
+    <section class="card__img_container">
+      <img class="card__img" src="./img/side.jpg" alt="background image">
+    </section>
+    </main>
   
 </body>
 </html>

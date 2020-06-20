@@ -1,5 +1,15 @@
 # Links para previsualizar desafio finalizado
 
+## Descripción:
+
+Frontloops (https://frontloops.io/) es una serie de 30 desafios hechos para resolver con puro HTML y CSS.
+
+Para resolverlos voy a utilizar metodologia **BEM** para el HTML y un preprocesador de CSS como **SASS**.
+
+Aprovechando las funciones de SASS voy a diseñar todos los desafios de manera **responsive**.
+
+
+
 ### Desafios 1  - 10 ###
 
 1.https://francofourmantin.github.io/Frontloops-challenge-HTML5---CSS3/Loop%201%20-%20Step%201/assets
@@ -11,7 +21,7 @@
 7.https://francofourmantin.github.io/Frontloops-challenge-HTML5---CSS3/Loop%201%20-%20Step%207/assets/  
 8.https://francofourmantin.github.io/Frontloops-challenge-HTML5---CSS3/Loop%201%20-%20Step%208/assets/  
 9.https://francofourmantin.github.io/Frontloops-challenge-HTML5---CSS3/Loop%201%20-%20Step%209/assets/  
-10.
+10.https://francofourmantin.github.io/Frontloops-challenge-HTML5---CSS3/Loop%201%20-%20Step%2010/assets/  
 
 ### Desafios 11 - 20 ###
 

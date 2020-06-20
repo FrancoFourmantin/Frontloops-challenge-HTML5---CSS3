@@ -1,0 +1,55 @@
+.buy{
+    max-width: 60em;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 3em;
+    align-items: center;
+
+
+    &__content{
+        max-width: 70%;
+        display: grid;
+        grid-gap:1em;
+    }
+
+    &__title{
+        font-size: 2.5em;
+    }
+
+    &__description{
+        color: $gray;
+        position: relative;
+        display: flex;
+        line-height: 1.5em;
+        align-items: center;
+        padding-left: 1.5em;
+
+        &::before{
+            content: '';
+            height: 90%;
+            width: 5px;
+            left: 0;
+            position: absolute;
+            background: $gray;
+            display: inline-block;
+            
+        }
+    }
+
+    &__btn{
+        max-width: 50%;
+        background-color: $red;
+        outline: none;
+        border: none;
+        padding: 1em;
+        color: white;
+        cursor: pointer;
+    }
+
+
+
+    &__preview{
+        width: 100%;
+    }
+}

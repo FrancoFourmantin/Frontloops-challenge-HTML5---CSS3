@@ -1,0 +1,222 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto , sans-serif;
+}
+
+
+//Colores
+
+$gray : #f2f2f2;
+$yellow : #f7cd75;
+$green : #8ac35e;
+$white:#ffffff;
+$black: #000;
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background-color: $yellow;
+
+    @media screen and (max-width:1000px) {
+     font-size: 12px;
+    }
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    transition: all ease-in-out .5s;
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #3d3d3d00;
+    border-radius: 5px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #0d0d0d00;
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+
+
+.container{
+    background-color: $white;
+    display: grid;
+    width: 60vw;
+    max-height: 60vh;
+    grid-template-columns: 40% 1fr;
+    grid-template-rows: 1fr;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px 0px rgba($black, $alpha: .40);
+    transition: all ease-in-out .5s;
+
+    @media screen and (max-width:1200px) {
+        width: 80vw;
+    }
+
+    @media screen and (max-width:1000px) {
+        width: 80vw;
+        max-height: 80vh;
+        height: 80vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
+    }
+
+
+    .wallets{
+        display: flex;
+        flex-direction: column;
+        padding: 2em;
+        background-color: $gray;
+        height: 60vh;
+        overflow-y: scroll;
+
+        @media screen and (max-width:1000px) {
+            height: 30vh;
+        }
+
+        &:hover::-webkit-scrollbar-track{
+
+            background: #3d3d3d;
+        }
+
+        &:hover::-webkit-scrollbar-thumb{
+            background: #0d0d0d;
+        }
+
+
+        &__header{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__title{
+            font-weight: 300;
+            font-size: 2em;
+        }
+
+        &__cards{
+            display: grid;
+            grid-gap: 2em;;
+            margin-top: 2em;
+            
+            .card{
+                width: 100%;
+                background:$white;
+                padding: 1em;
+                display: grid;
+                grid-gap: .5em;
+                justify-content: start;
+                border: 1px solid rgba($black, $alpha: .1);
+                border-radius: 2px;
+
+                &:hover{
+                    border: 2px solid rgb(133,133,233);
+                    cursor: pointer;
+                }
+
+                &--active{
+                    border: 2px solid rgb(133,133,233);
+                }
+
+                &__img{
+                    width: 3em;
+                }
+            }
+        }
+    } //Fin de wallets
+
+    .balance{
+        height: 60vh;
+        overflow-y: scroll;
+        padding: 2em;
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (max-width:1000px) {
+            height: 50vh;
+        }
+        &:hover::-webkit-scrollbar-track{
+
+            background: #3d3d3d;
+        }
+
+        &:hover::-webkit-scrollbar-thumb{
+            background: #0d0d0d;
+        }
+        &__header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 3em;
+            border-bottom: 1px solid rgba($black, $alpha: .20);
+        }
+
+        &__title{
+            font-weight: 300;
+            font-size: 2em;
+        }
+
+        &__value{
+            font-weight: 600;
+            font-size: 2em;
+            display: flex;
+            &::after{
+                content: '00';
+                font-size: .5em;
+            }
+        }
+
+    .carrito{
+        display: grid;
+        grid-gap: 1em;
+
+        .item{
+            display: flex;
+            align-items: center;
+            padding: 1em;
+
+            &__minus{
+                border: 1px solid $gray;
+                border-radius: 50%;
+                margin-right: 2em;
+            }
+
+            &__description{
+                color: gray;
+            }
+
+            &__prize{
+                margin-left: auto;
+                font-size: 1.3em;
+                font-weight: 600;
+                color: rgb(133, 133, 233);
+                display: flex;
+                &::after{
+                    content: '00';
+                    font-size: .5em;
+                }
+
+                &--active{color: $green;}
+            }
+        }
+    }
+
+
+
+    }
+}

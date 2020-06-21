@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+
+//Colores
+
+$yellow : #ECC843;
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: url(../img/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    justify-content: end;
+    justify-items: end;
+    overflow: hidden;
+}
+
+.arrows{
+    position: absolute;
+    padding: 1em;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    color: white;
+    z-index: 1;
+
+    &__up , &__down{
+        display: flex;
+        flex-direction: column;
+        // background-color: #fff;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    &__value{
+        text-align: center;
+        font-weight: 500;
+    }
+}
+
+
+
+.container{
+    width: 35vw;
+    height: 100vh;
+    background-color: transparentize($yellow, $amount: .10);
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    align-items: flex-end;
+    z-index: 0;
+
+    @media screen and (max-width:840px){
+        width: 100vw;
+        clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+        background-color: transparentize($yellow, $amount: .40);
+    }
+   
+    padding: 1em;
+    &__read{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        flex: 3;
+        cursor: pointer;
+    }
+
+
+    &__readText{
+        position: relative;
+       top: 2px;
+    }
+
+    &__title{
+        flex: 1;
+        font-size: 6em;
+    }
+
+    &__subtitle{
+        flex: 2;
+        font-size: 2em;
+        text-align: right;
+        width: 60%;
+    }
+
+    &__views{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}

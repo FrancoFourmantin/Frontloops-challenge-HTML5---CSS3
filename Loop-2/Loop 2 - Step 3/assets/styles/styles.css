@@ -1,0 +1,215 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Roboto , sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #b884e5;
+  background: -webkit-gradient(linear, left top, left bottom, from(#b884e5), to(#7d81e1));
+  background: linear-gradient(180deg, #b884e5 0%, #7d81e1 100%);
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+}
+
+.card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 2fr 1fr;
+      grid-template-rows: 1fr 2fr 1fr;
+  overflow: hidden;
+  background-color: #5F5280;
+  width: 20em;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.25);
+}
+
+.card__icon {
+  width: 2em;
+  height: 2em;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+}
+
+.card__icon--noBackground {
+  background-color: transparent;
+  margin-left: auto;
+  width: 3em;
+  cursor: pointer;
+}
+
+.card__icon img {
+  width: 50%;
+}
+
+.card__title {
+  padding-left: .6em;
+}
+
+.card__header {
+  grid-column: 1/-1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  background: #ba7ed9;
+  background: -webkit-gradient(linear, left top, right top, from(#ba7ed9), color-stop(70%, #a77ad1));
+  background: linear-gradient(90deg, #ba7ed9 0%, #a77ad1 70%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2em;
+  position: relative;
+}
+
+.card__header :first-child {
+  position: relative;
+}
+
+.card__header :first-child::before {
+  content: '';
+  width: 3px;
+  height: 10em;
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+}
+
+.card .folders {
+  grid-column: 1/-1;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  position: relative;
+}
+
+.card .folders::before {
+  content: '';
+  width: 3px;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  left: 2.91em;
+  z-index: 0;
+}
+
+.card .folders__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-left: 3.65em;
+}
+
+.card .folders__item {
+  padding-left: 1em;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.6);
+  -webkit-transition: all ease-in-out .3s;
+  transition: all ease-in-out .3s;
+}
+
+.card .folders__item:hover {
+  color: #fff;
+}
+
+.card .folders__item::before {
+  content: '';
+  width: 10px;
+  z-index: 2;
+  background-origin: content-box;
+  background-color: white;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  left: -.92em;
+}
+
+.card .folders__item::after {
+  content: '';
+  width: 30px;
+  z-index: 1;
+  background-origin: content-box;
+  background-color: #5F5280;
+  height: 30px;
+  position: absolute;
+  left: -.92em;
+}
+
+.card__footer {
+  grid-column: 1/-1;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  background: #ba7ed9;
+  background: -webkit-gradient(linear, left top, right top, from(#ba7ed9), color-stop(70%, #a77ad1));
+  background: linear-gradient(90deg, #ba7ed9 0%, #a77ad1 70%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2em;
+  overflow: hidden;
+}
+
+.card__footer :first-child {
+  position: relative;
+  z-index: 1;
+}
+
+.card__footer :first-child::before {
+  content: '';
+  width: 3px;
+  height: 20em;
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+}
+
+.card__footer :first-child::after {
+  content: '';
+  width: 3px;
+  height: 20em;
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+}
+/*# sourceMappingURL=styles.css.map */

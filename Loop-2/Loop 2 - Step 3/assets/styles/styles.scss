@@ -1,0 +1,199 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto , sans-serif;
+}
+
+
+//Colores
+
+$darkPurple : #5F5280;
+$white : #fff;
+$black : #000;
+
+
+
+@mixin backgroundGradient {
+    background: rgb(184,132,229);
+    background: linear-gradient(180deg, rgba(184,132,229,1) 0%, rgba(125,129,225,1) 100%);
+}
+
+@mixin gradientItems {
+    background: rgb(186,126,217);
+    background: linear-gradient(90deg, rgba(186,126,217,1) 0%, rgba(167,122,209,1) 70%);
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    @include backgroundGradient();
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    color: $white;
+}
+
+
+.card{
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    overflow: hidden;
+    background-color: $darkPurple;
+    width: 20em;
+    border-radius: 5px;
+    box-shadow: 2px 2px 15px 0px rgba(#000, $alpha: .25);
+
+    &__icon{
+        width: 2em;
+        height: 2em;
+        background-color: $white;
+        display: flex;
+        justify-content: center;
+        border-radius: 50%;
+
+        &--noBackground{
+            background-color: transparent;
+            margin-left: auto;
+            width: 3em;
+            cursor: pointer;
+        }
+
+        & img{
+            width: 50%;
+        }
+    }
+
+    &__title{
+        padding-left: .6em;
+    }
+    
+
+    &__header{
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        @include gradientItems();
+        display: flex;
+        align-items: center;
+        padding: 2em;
+        position: relative;
+        
+        
+        :first-child{
+            position: relative;
+            &::before{
+                content: '';
+                width: 3px;
+                height: 10em;
+                display: block;
+                background-color: $white;
+                position: absolute;
+                bottom: 0;
+            }
+        }
+
+    }
+
+
+    .folders{
+        grid-column: 1/-1;
+        grid-row: 2/3;
+        position: relative;
+        &::before{
+            content: '';
+            width: 3px;
+            height: 100%;
+            background-color: $white;
+            position: absolute;
+            left: 2.91em;
+            z-index: 0;
+        }
+
+
+        &__list{
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding-left: 3.65em;
+            
+        }
+
+        &__item{
+            padding-left: 1em;
+            list-style-type: none;
+            display: flex;
+            position: relative;
+            align-items: center;
+            cursor: pointer;
+            color: rgba($white, $alpha: .6);
+            transition: all ease-in-out .3s;
+
+            &:hover{
+                color: $white;
+            }
+
+            &::before{
+                content: '';
+                width: 10px;
+                z-index: 2;
+                background-origin: content-box;
+                background-color: white;
+                height: 10px;
+                border-radius: 50%;
+                position: absolute;
+                left: -.92em;
+            }
+
+            &::after{
+                content: '';
+                width: 30px;
+                z-index: 1;
+                background-origin: content-box;
+                background-color: $darkPurple;
+                height: 30px;
+                
+                position: absolute;
+                left: -.92em;
+            }
+        }
+        
+    }
+
+
+    &__footer{
+        grid-column: 1/-1;
+        grid-row: 3/4;
+        @include gradientItems();
+        display: flex;
+        align-items: center;
+        padding: 2em;
+        overflow: hidden;
+
+        :first-child{
+            position: relative;
+            z-index: 1;
+            &::before{
+                content: '';
+                width: 3px;
+                height: 20em;
+                display: block;
+                background-color: $white;
+                position: absolute;
+                bottom: 0;
+            }
+
+            &::after{
+                content: '';
+                width: 3px;
+                height: 20em;
+                display: block;
+                background-color: $white;
+                position: absolute;
+                top: 0;
+            }
+        }
+    }
+}
+
+

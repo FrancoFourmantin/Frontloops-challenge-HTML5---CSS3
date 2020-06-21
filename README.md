@@ -41,7 +41,7 @@ Aprovechando las funciones de SASS voy a diseñar todos los desafios de manera *
 
 12.https://francofourmantin.github.io/Frontloops-challenge-HTML5---CSS3/Loop-2/Loop%202%20-%20Step%202/assets/
 
-13.
+13.https://francofourmantin.github.io/Frontloops-challenge-HTML5---CSS3/Loop-2/Loop%202%20-%20Step%203/assets/
 
 14.
 

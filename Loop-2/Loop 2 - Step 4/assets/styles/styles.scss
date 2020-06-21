@@ -1,0 +1,136 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto , sans-serif;
+}
+
+
+//Colores
+
+$darkPurple : #55557E;
+$black : #252525;
+$white : #fff;
+
+
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: $darkPurple;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+
+
+    .buttons{
+
+        &__list{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-gap: 3px;
+            list-style-type: none;
+        }
+
+
+        &__item{
+            padding: 1.3em;
+            background-color: darken($darkPurple, $amount: 15);
+            fill: $darkPurple;
+            transition: ease-in-out .3s all;
+            &:hover{
+                cursor: pointer;
+                background-color: darken($darkPurple, $amount: 5);
+
+            }
+
+            &--active{
+                box-shadow: 0px 0px 5px 0px darken($darkPurple, $amount: 35);
+                background-color: darken($darkPurple, $amount: 35);
+                z-index: 1;
+                fill: $white;
+                transform: scale(1.2);
+
+                &:hover{
+                    cursor: pointer;
+                    background-color: darken($darkPurple, $amount: 5);
+    
+                }
+            }
+        }
+    }//Fin de buttons
+
+    .order{
+        display: grid;
+        background-color: $white;
+        width: 90%;
+        margin: 2em auto; 
+        overflow: hidden;
+        border-radius: 5px;
+        
+
+
+        &__header{
+                background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/food.jpg);
+            background-size: cover;
+            background-position: center;
+            padding: 4em 1em 1em 1em;
+            color: white; 
+            display: grid;
+            text-align: start;     
+            justify-content: start;      
+        }
+
+
+        &__location{
+            display: flex;
+            align-items: flex-end;
+            font-size: .8em;
+            fill: $white;
+            position: relative;
+            right: .8em;
+            margin-top: .5em;
+        }
+
+
+        .food{
+            background-color: rgba($black, $alpha: .3);
+            color: rgba($black, $alpha: .3);
+            
+            &__list{
+                display: flex;
+                flex-direction: column;
+                grid-gap: 1px;
+            }
+
+            &__item{
+                padding: 1em;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: .8em;
+                font-weight: 400;
+                background-color: $white;
+                transition: all ease-in-out .3s;
+                &:hover{
+                    color: $black;
+                    font-size: 1.1em;
+                }
+            }
+        }
+    }
+
+
+
+}
+

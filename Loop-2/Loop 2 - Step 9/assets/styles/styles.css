@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto , sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background-color: #4677F6;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 500px) {
+  .card {
+    height: 100vh;
+    width: 90vw;
+  }
+}
+
+.card__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1em;
+}
+
+.card__header_icon {
+  fill: #868686;
+  -webkit-transition: ease-in-out .3s all;
+  transition: ease-in-out .3s all;
+}
+
+.card__header_icon:hover {
+  fill: #000;
+  cursor: pointer;
+}
+
+.card__header_title {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.card__travel {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 1em;
+  padding: 2em 1.7em;
+  border-radius: 5px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(70, 119, 246, 0.8))), url(../img/map.png);
+  background-image: linear-gradient(rgba(70, 119, 246, 0.8)), url(../img/map.png);
+  background-position: center;
+  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+  scale: 1.05;
+}
+
+.card__travel_total_progress {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr auto;
+      grid-template-columns: auto 1fr auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  color: #fff;
+}
+
+.card__travel_progress {
+  background-color: #999999;
+  height: 1px;
+  margin: 0 1em;
+  border: none;
+  outline: none;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card__travel_progress::after, .card__travel_progress::before {
+  content: '';
+  height: 8px;
+  width: 8px;
+  background-color: #fff;
+  display: block;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.card__travel_progress_total {
+  width: 40%;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  z-index: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.card__travel_progress_total::after {
+  content: url(../img/car.svg);
+  position: relative;
+  top: -.9em;
+  left: .7em;
+}
+
+.card__travel_total_distance {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #fff;
+}
+
+.card__travel_time {
+  font-weight: 600;
+}
+
+.card__travel_time_value {
+  font-weight: 400;
+  color: #cccccc;
+}
+
+.card__travel_distance {
+  font-weight: 600;
+}
+
+.card__travel_distance_value {
+  font-weight: 400;
+  color: #cccccc;
+}
+
+.card__travel_button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font-weight: 500;
+  position: absolute;
+  padding: .5em 1em;
+  border-radius: 5px;
+  background-color: #4677F6;
+  border: none;
+  outline: none;
+  right: 2em;
+  cursor: pointer;
+  bottom: -1em;
+}
+
+.card__travel_directions {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-auto-rows: 50px;
+  grid-gap: 1em;
+  margin-top: 1em;
+  padding: 1em;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card__travel_title {
+  font-weight: 500;
+  padding-bottom: 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.card__travel_direction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card__travel_direction_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0em 1em;
+}
+
+.card__travel_direction_time {
+  color: #868686;
+}
+
+.card__travel_direction_instruction {
+  font-weight: 500;
+}
+
+.card__travel_img {
+  background: url(../img/streetview.jpg);
+  width: calc(100% + 1em);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card__travel_img::after {
+  content: url(../img/marker.svg);
+  position: relative;
+  left: 1em;
+}
+/*# sourceMappingURL=styles.css.map */
